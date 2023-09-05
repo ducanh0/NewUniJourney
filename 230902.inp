@@ -1,0 +1,143 @@
+nhap du lieu
+phi1006 triet_mac_le 3
+pec1008 kinh_te_mac_le 2
+phi1002 cnxhkh 2
+his1001 lich_su_dang 2
+pol1001 tu_tuong_hcm 2
+flf1107 b1 5
+flf1108 b2 5
+mat1093 dai_so 4
+mat1041 calculus1 4
+mat1042 calculus2 4
+epn1095 physics1 2
+epn1096 physics2 2
+int1007 gioi_thieu_cntt 3
+int1008 nhap_mon_lap_trinh 3
+elt2035 tin_hieu_he_thong 3
+int2210 ctdl_giai_thuat 4
+mat1101 xac_suat 3
+int2215 lap_trinh_nang_cao 4
+int1050 toan_roi_rac 4
+int2212 kien_truc_may_tinh 4
+int2214 nguyen_ly_he_dieu_hanh 4
+int2211 co_so_du_lieu 4
+int2213 mang_may_tinh 4
+int2208 cong_nghe_phan_mem 3
+int2204 oop 3
+int3202 he_quan_tri_csdl 3
+int3110 phan_tich_va_thiet_ke_huong_doi_tuong 3
+int3306 phat_trien_ung_dung_web 3
+int3401 ai 3
+int3507 cac_van_de_hien_dai_cntt 3
+int3508 thuc_tap_chuyen_nganh 3
+int2044 ly_thuyet_thong_tin 3
+int3403 do_hoa_may_tinh 3
+int3117 kiem_thu_va_dam_bao_chat_luong_phan_mem 3
+int3105 kien_truc_phan_mem 3
+int3106 phuong_phap_hinh_thuc 3
+int3108 lap_trinh_nhung_va_tgian_thuc 3
+int3109 thu_thap_va_phan_tich_yeu_cau 3
+int3111 quan_ly_du_an_phan_mem 3
+int3115 thiet_ke_giao_dien_nguoi_dung 3
+int3120 phat_trien_ung_dung_di_dong 3
+int3415 phat_trien_ung_dung_di_dong_nang_cao 3
+int3206 csdl_phan_tan 3
+int3207 kho_dl 3
+int3209 khai_pha_dl 3
+int3213 nhap_mon_an_toan_thong_tin 3
+int3216 phan_tich_danh_gia_hieu_nang_he_thong 3
+int3211 tich_hop_he_thong 3
+int2020 phan_tich_thiet_ke_cac_httt 3
+int3301 thuc_hanh_he_dieu_hanh_mang 3
+int3303 mang_khong_day 3
+int3304 lap_trinh_mang 3
+int3305 truyen_thong_da_phuong_tien 3
+int3307 an_toan_va_an_ninh_mang 3
+int3319 dien_toan_dam_may 3
+int3310 quan_tri_mang 3
+int3501 khoa_hoc_dich_vu 3
+int3505 kien_truc_huong_dich_vu 3
+int3506 cac_he_thong_thuong_mai_dien_tu 3
+int3402 chuong_trinh_dich 3
+int3404 xu_ly_anh 3
+int3406 xu_ly_ngon_ngu_tu_nhien 3
+int3512 cp 3
+int3407 tin_sinh_hoc 3
+int3132 du_an_cong_nghe 3
+int3514 phap_luat_va_dao_duc_nghe_nghiep_cntt 2
+int3102 phuong_phap_tinh 3
+int3103 toi_uu_hoa 3
+uet1001 tieng_anh_bo_tro 4
+int4054 khoa_luan_tot_nghiep 10
+.
+nhap mon tien quyet
+pec1008 phi1006 .
+mat1042 mat1041 .
+epn1096 epn1095 .
+elt2035 mat1042 .
+int2210 int1008 .
+mat1101 mat1041 .
+int2215 int1008 .
+int2212 int1007 .
+int2214 int1008 .
+int2211 int1008 .
+int2213 int1008 .
+int2208 int1008 .
+int2204 int1008 .
+int3202 int2211 .
+int3110 int2204 .
+int3306 int2204 int2211 .
+int3401 int2210 .
+int3507 int1007 .
+int3508 int1007 .
+int2044 mat1101 .
+int3403 int2210 .
+int3117 int2204 .
+int3105 int2204 .
+int3106 int1050 .
+int3108 int2212 int2215 .
+int3109 int2208 .
+int3111 int2208 .
+int3115 int2204 .
+int3120 int1008 .
+int3415 int1008 .
+int3206 int2211 .
+int3207 int2211 .
+int3209 int2211 .
+int3216 int2211 .
+int2020 int2211 .
+int3301 int1008 .
+int3303 int2213 .
+int3304 int2213 .
+int3305 int2213 .
+int3307 int2213 .
+int3319 int1008 .
+int3310 int2213 .
+int3501 int1007 .
+int3505 int2204 .
+int3506 int1007 .
+int3402 int2210 .
+int3404 int2210 .
+int3406 int2210 .
+int3407 int2215 .
+int3132 int2215 .
+int3102 mat1093 mat1042 .
+int3103 mat1093 mat1042 .
+.
+nhap diem + review
+int1050 a toan roi rac
+mat1041 b giai tich 1
+epn1096 b vat ly 2
+int2215 a+ ltnc
+pec1008 b kinh te mac le
+mat1093 b dai so
+epn1095 c+ vat ly 1
+phi1006 a triet mac le
+int1008 a+ nhap mon lap trinh
+int1007 a gioi thieu cntt
+phi1002 a cnxhkh
+pol1001 b+ tu_tuong_hcm
+his1001 c+ lich_su_dang
+.
+nhap yeu cau
+0
