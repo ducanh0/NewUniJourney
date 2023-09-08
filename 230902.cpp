@@ -44,7 +44,7 @@ unordered_map<string, int> nameToInt; /// anh xa thanh int de tim cac mon tien q
 unordered_map<string, double> grade;
 vector<int> adj[slMonHocCoTheHoc] ;
 int ok[slMonHocCoTheHoc], danhDau ; /// dfs de tim cac mon tien quyet
-vector<pair< pair<string, string>, int> > V ; /// luu diem - review tung mon hoc - so tin chi
+vector<pair< pair<string, string>, pair<int, bool > > > V ; /// luu diem - review tung mon hoc - so tin chi - co bat buoc hoc hay khong
 int slMonHoc = 0 , slTinChi = 0 , dem[10] = {0} ; /// gpa = sum / slTinChi , dem[0] = sl a+ , dem[1] = sl a , ...
 long double sum  = 0.0;
 
@@ -54,7 +54,7 @@ void xemMonHoc(string maHocPhan){
     cout << "Ten mon hoc : " << nameToname[maHocPhan] << "\n" ;
 
     int id = nameToInt[maHocPhan];
-    cout << "So tin chi : " << V[id].second << "\n" ;
+    cout << "So tin chi : " << V[id].second.first << "\n" ;
 
     cout << "Diem : " << V[id].first.first << "\n" ;
 
@@ -75,13 +75,14 @@ void timCacMonTienQuyet(string maHocPhan){
     ok[u] = ++danhDau;
     dfs(u) ;
 
-    bool okay = bool(V[u].first.first != "Chua hoc") ; /// co du dieu kien hoc mon do hay chua
+    bool okay = 1 ; /// co du dieu kien hoc mon do hay chua
 
     for(int i = 0 ; i < slMonHocCoTheHoc ; i ++)
         if((i != u) && (ok[i] == ok[u]))
             okay &= (V[i].first.first != "Chua hoc");
 
-    cout << "Ten mon hoc : " << nameToname[maHocPhan] << "\nKet luan : " << (okay ? "Du " : "Chua du ") << "dieu kien hoc\n----------------\n" ;
+    cout << "Ten mon hoc : " << nameToname[maHocPhan] << "\nKet luan : " << (okay ? "Du " : "Chua du ") << "dieu kien hoc\n" ;
+    cout << (V[u].second.second ? "Bat buoc hoc" : "Tu chon") << "\n--------------\n" ;
     cout << "Cac mon hoc tien quyet : \n" ;
 
     for(int i = 0 ; i < slMonHocCoTheHoc ; i ++)
@@ -117,10 +118,12 @@ void boSungMonHoc(){
     cin >> diem ;
     getline(cin, review) ;
 
+    bool batBuoc ; cin >> batBuoc;
+
     int id = nameToInt[maHocPhan] ;
 
-    slTinChi += V[id].second;
-    sum += grade[diem] * 1.0 * V[id].second;
+    slTinChi += V[id].second.first;
+    sum += grade[diem] * 1.0 * V[id].second.first;
 
     if(diem == "f")
         dem[0] ++ ;
@@ -131,6 +134,7 @@ void boSungMonHoc(){
 
     V[id].first.first = diem ;
     V[id].first.second = V[id].first.second + "\n" + review;
+    V[id].second.second = batBuoc;
 }
 
 void boSungReview(){
@@ -163,13 +167,14 @@ signed main(){
 
         string tenMonHoc ; cin >> tenMonHoc ;
         int soTinChi ; cin >> soTinChi ;
+        bool batBuoc ; cin >> batBuoc ;
 
         nameToname[maHocPhan] = tenMonHoc ;
         nameToInt[maHocPhan] = slMonHoc ;
         intToName[slMonHoc] = maHocPhan ;
         slMonHoc ++ ;
 
-        V.push_back({{"Chua hoc", ""}, soTinChi});
+        V.push_back({ {"Chua hoc", ""}, {soTinChi, batBuoc} });
     }
 
     slMonHoc = 0 ; /// dem so mon hoc da hoan thanh
@@ -207,8 +212,8 @@ signed main(){
 
         int id = nameToInt[maHocPhan] ;
 
-        slTinChi += V[id].second;
-        sum += grade[diem] * 1.0 * V[id].second;
+        slTinChi += V[id].second.first;
+        sum += grade[diem] * 1.0 * V[id].second.first;
 
         if(diem == "f")
             dem[0] ++ ;
