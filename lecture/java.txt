@@ -1,25 +1,25 @@
 
-jvm - java virtual machine
+- jvm - java virtual machine
 
 run bytecode , each operating system has different jvm , the output is the same across all 
 operating systems
 
 bytecode is .class
 
-jdk - java development kit
+- jdk - java development kit
 
 include jre (java runtime environment) , compliers , javadoc  , java debugger , etc
 
-jre
+- jre
 
 can run java program however won't be able to compile it
-
+- 
 long ( = long long in c++)
 long a = 23L  ;
 
 float a = 2.3f ; (khong co 'f' se bi hieu la double)
 
-oop
+- oop
 
 1. tính trừu tượng 
 
@@ -37,4 +37,77 @@ oop
 4. đa hình
 
 	mỗi thg con kế thừa thg cha sẽ có cách thực hiện riêng dù cùng làm 1 chức năng (ví dụ : các loại động vật kêu khác nhau)
+
+java không hỗ trợ đa kế thừa (1 con kế thừa nhiều cha một lúc) :((
+
+
+- overloading 
+	được định nghĩa các hàm tên giống hệt nhau nhma khác danh sách tham số 
+	nếu không có hàm nào khớp hoàn toàn thì tham số có thể được ép kiểu tự động sang kiểu lớn hơn nếu hàm nào đó khớp kiểu lớn hơn 
+	ví dụ : add(2, 1.5f) có thể gọi đến hàm add(int , double) nếu hàm add(int , float) không tồn tại , máy sẽ tự động ép kiểu float -> double
+java không hỗ trợ operator overloading :((
+
+- overridding
+
+	một class con nào đó triển khai cách làm khác khi thực hiện 1 hàm đc kế thừa mà k ảnh hưởng code ở thg cha
+	super.ham() -> gọi hàm 'ham()' của class cha
+	super() -> gọi hàm constructor của class cha
+
+	static , private , final không thể overriding !!
+
+- static block : 
+	static{
+		khởi tạo các biến static 
+	}
+	static{
+		nếu viết nhiều static block kiểu này thì giá trị đã khởi tạo có thể bị ghi đè trong các static block bên dưới
+	}
+
+- this(para1, para2, ... , paraN) -> gọi đến hàm constructor tương ứng trong chính class đó
+
+- abstract class A {
+	abstract method B (); // class con PHẢI định nghĩa lại hàm này 
+
+	method C () {
+		// code như bình thường , class con có thể kế thừa hàm này luôn
+	}
+}
+
+mọi class con PHẢI định nghĩa lại TOÀN BỘ hàm abstract , nếu không thì class con đó PHẢI LÀ abstract
+
+bất kỳ thg con nào kế thừa A thì đều phải định nghĩa lại hàm B , abstract để biến điều này thành bắt buộc 
+
+- interface : toàn bộ method trong interface mặc định là public abstract , class con kế thừa vs cú pháp
+	interface B {
+		// có thể kế thừa 'extends' NHIỀU interface khác
+
+		// biến mặc định là public static final , cần đc khởi tạo giá trị ngay khi khai báo
+
+		// các hàm public abstract , KHÔNG đc chứa hàm có body
+
+		int add(int a, int b); // khai báo nnay cx dc, máy sẽ mặc định là public abstract
+	}
+
+	class A implements B {
+		// override toàn bộ hàm của interface B
+
+		// một class được phép implements nhiều hơn một interface
+
+		// khi implements nhiều interface , nếu biến trùng tên thì dùng tên interface để phân loại, ví dụ : B.x , C.x
+		// còn hàm nếu trùng thì phải giống nhau , chỉ cần implements 1 lần
+
+	}
+- package : nhóm các class , interface lại với nhau khi làm project
+	-> tiện lợi cho việc tìm kiếm 
+	-> sắp xếp cấu trúc rõ ràng hơn
+
+	thứ tự khi vừa import vừa tạo package mới :
+		+ package declaration
+		+ package import
+
+
+	package a.b ; // create sub-package b inside package a
+
+
+
 
