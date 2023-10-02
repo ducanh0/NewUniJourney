@@ -1,0 +1,40 @@
+
+jvm - java virtual machine
+
+run bytecode , each operating system has different jvm , the output is the same across all 
+operating systems
+
+bytecode is .class
+
+jdk - java development kit
+
+include jre (java runtime environment) , compliers , javadoc  , java debugger , etc
+
+jre
+
+can run java program however won't be able to compile it
+
+long ( = long long in c++)
+long a = 23L  ;
+
+float a = 2.3f ; (khong co 'f' se bi hieu la double)
+
+oop
+
+1. tính trừu tượng 
+
+	chỉ hiển thị những gì người khác cần biết và ẩn những thứ còn lại 
+	ví dụ : nồi cơm điện thì ngta chỉ cần biết các công tắc điều khiển làm chức năng nào , còn lại nó thực hiện nnao thì ng dùng k cần biết 
+
+2. tính đóng gói
+
+	gom hết các trạng thái và chức năng cần thiết của 1 kiểu thực thể về 1 chỗ (nnay thì khi sửa code chỉ cần sửa một nơi , các nơi dùng nó k bị ảnh hưởng)
+
+3. kế thừa 
+
+	tránh trùng lặp code , lớp con kế thừa lớp cha
+
+4. đa hình
+
+	mỗi thg con kế thừa thg cha sẽ có cách thực hiện riêng dù cùng làm 1 chức năng (ví dụ : các loại động vật kêu khác nhau)
+

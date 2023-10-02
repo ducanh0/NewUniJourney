@@ -1,0 +1,17 @@
+1. video thực chất là chiếu các hình tĩnh liên tục trong một thời gian ngắn
+2. mỗi lần hiển thị các hình tĩnh là hiển thị nhiều lớp hình ảnh lên rồi chiếu 
+3. âm thanh có dạng âm thanh ngắn và dài , có các chế độ ngắt , ngưng và tiếp tục 
+4. xử lý chuột , xử lý bàn phím 
+5. có thể làm mờ hình ảnh , pha màu (red, green, blue) 
+6. đọc xuất file dữ liệu 
+7. hiển thị chữ (font, cỡ chữ)
+8. các class trong project game cuối kì :
+	LSound (âm thanh dạng ngắn)
+	LMusic (âm thanh dạng dài)
+	LTexture (hiển thị hình ảnh , chữ)
+	LButton (xử lý nút , di chuyển vào , click chuột vào sẽ cho ra những chức năng gì)
+	
+9. xử lý va chạm , xử lý di chuyển 
+10. coi màn hình là hệ tọa độ 2 chiều , có xử lý hình học khi va chạm , tự động né 
+11. chia file , mỗi file lưu trữ 1 thư viện đại diện cho 1 nhóm thực thể trong game (mainCharacter , enemy , bullet , media , ...)
+	dùng mqh has_a , chưa dùng kế thừa 

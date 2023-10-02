@@ -1,0 +1,108 @@
+kiến trúc máy tính
+
+hieutt@vnu.edu.vn
+
+architecture = organization + protocol (kiến trúc tập lệnh)
+
+loại máy tính
+
+1. máy tính thông thường
+
+2. server
+
+3. máy tính nhúng (trong ô tô , thiệt bị điện tử , ...)
+
+computer
+- cpu (central processing unit)
+	+ cu (control unit)
+	+ alu (arithmetic an logic unit)
+	+ registers
+	+ clock 
+	+ caches
+(bộ tính toán số thực , multi media , tính toán song song , ...)
+- memory
+	+ internal memory (static , dynamic ram)
+		++ ram (random access memory - truy cập theo địa chỉ , kphai đi tuần tự đến nó ), dùng điện để nuôi để refresh, ssd
+		++ rom (read only memory , biot : basic input output ), f rom , fp rom
+	+ external memory
+		++ hdd , fdd , cd/dvd, usb , flash memory, ssd, ...(từ , mạch , quang , ... lưu được trạng thái 0/1 là được )
+- i/o devices : 
+	+ input devices : keyboard , mouse  , joystick , touchpad , microphone , camera , webcam , scanner  , sensor , touch screen, drawing pad , ...
+	+ output  : screen , monitor , printer , speaker , projector , plotter , ...
+	+ network devices : modem , hub , router, nic , wifi, bluetooth, nfc, , ...
+
+thiết bị vào/ra chuẩn , k có nó thì hệ thống báo lỗi , k chạy đc 
+thanh ram có lỗ trống ở giữa để tránh cắm ngược , 1 bên 40 chân lưu địa chỉ  , 1 bên 32 chân là 32 bit lưu dữ liệu 
+
+phân cấp bộ nhớ
+
+(low) tape  , disk (ssd, hdd), memory (ram  , rom ), l2 cache  , l1 cache  , register (high)
+ (càng xuống càng lớn , càng chậm , càng rẻ)
+
+thứ tự ưu tiên : not , and , or 
+
+n/8 * 2^k
+
+2^10 = 1 k  , 2^20 = 1 m , 2^30  = 1 g
+
+
+4 * 2^k = 6*2^30 -> 2^k = 3 * 2^29
+
+
+day bit doc tu phai sang trai
+
+x : he 10
+0x : he 8
+0x8 : he 16
+
+bieu dien bu 1 , bu 2
+
+a b a%2 (a -> a/2 , b -> b*2 , ans = sum (a(i)) if a(i) % 2 = 1)
+56 * 39
+28 78 0
+14 156 0
+7 312 1
+3 624 1
+1 1248 1
+0
+
+
+srt division 
+
+convert float to binary
+
+biểu diễn dấu phẩy tĩnh
+
+phân ra bao nhiêu bit biểu diễn phần nguyên, bao nhiêu bit biểu diễn phần thực
+
+biểu diễn dấu phẩy động
+
+trong hệ 10 : trước dấu thập phân chỉ đc có 1 chữ số khác 0 (vd : 4.xxxxx * 10^(yyyyy) )
+trong hệ 2 : chỉ có 1 bit 1 trước dấu phẩy động (vd : 1.xxxx * 2^(yyyyy)) )
+lưu 3 phần : bit dấu ( + , - ) , xxxx , yyyy
+
+
+120 0 (%2 -> viết phần dư sang -> lấy từ dưới lên)
+60 0
+30 0
+15 1
+7 1
+3 1
+1 1
+0
+
+0.625 1 (x2 -> viết phần nguyên sang -> lấy từ trên xuống)
+0.25 0
+0.5 1
+0
+
+kiểm tra :
+cộng/trừ dạng bù 2
+
+biểu diễn dấu phẩy động độ chính xác single/double(nhớ : bias = 127/1023 , 1/8/32-1-8 , 1(bit dấu)/11(xxxxx)/64-1-11(yyyyy) ) , 
+chuyển sang hệ 10 = (-1)^(bit dấu) * (1 + 0.xxxxx) * 2^(yyyyy)
+
+tên mảng là hằng con trỏ trỏ đến vị trí đầu tiên của mảng 
+
+mips
+

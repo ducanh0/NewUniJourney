@@ -1,0 +1,99 @@
+230828
+
+-> học để thiết kế bộ chứa dữ liệu của hệ thống
+
+mô hình dữ liệu quan hệ
+
+- database là bộ chứa dữ liệu của hệ thống 
+- cần thiết kế được mô hình có quan hệ logic của database (er(logic, 50%) -> relation (cài đặt cụ thể được, 20%) -> sql(truy vấn được dữ liệu theo yêu cầu, 30%))
+
+draw io
+
+catalog (meta-data): chứa các thông tin về cấu trúc tập tin , kiểu và dạng lưu trữ của các thành phần , những ràng buộc
+	các chương trình thông qua cái này (như chỉ dẫn vậy) để làm việc vs csdl
+
+thực thể yếu là thực thể không có khóa 
+khóa là thuộc tính giúp phân biệt các đối tượng trong cùng thực thể 
+
+cấp liên kết : số kiểu thực thể tham gia vào liên kết đó
+
+liên kết đệ quy : một kiểu thực thể tham gia vs nhiều vai trò khác nhau
+	trong kiểu này cần nêu rõ các vai trò đó ở 2 vế
+--------------------------------------------------------------
+create database myDB; 
+drop database myDB;
+use myDB;
+
+alter database myDB read only = 1 ; // cannot modify data, cannot drop database
+alter database myDB read only = 0 ; // can modify data
+
+create table myTable (
+	column_1 type_of_data,
+	column_2 type_of_data,
+	column_3 type_of_data,
+	...
+);
+
+select * from myTable; // select all data
+select column1, column_3 from myTable ; 
+
+rename table myTable to kltm ; 
+
+alter table kltm
+add column_4 type_of_data; // add new column
+
+alter table kltm
+rename column column_1 to banana; // rename column
+
+alter table kltm
+modify column column_idx new_type_of_data; // change type of data of column_idx
+
+alter table kltm
+modify column_idx type_of_data_of_column_idx
+after column_idx2 ; // move column_idx after column_idx2
+
+alter table kltm
+modify column_idx type_of_data_of_column_idx
+first ; // move column_idx to the first
+
+alter table kltm
+drop column banana;
+
+drop table kltm;
+
+insert into kltm
+values(
+	val1,
+	val2,
+	...
+); // add new row , val_idx is the value of column_idx
+
+insert into kltm
+values (val1, val2, ...),
+	(val1, val2, ...),
+	(),
+	...
+	(); /// add multi rows
+
+insert into kltm (column_idx1, column_idx2, ..., column_idxM)
+values (val1, val2, ... , valM); /// add new row with some column (not all column, some are declare , others are null)
+
+select * 
+from kltm
+where condition ;
+
+update kltm
+set column_idx = val_idx,
+	column_idx2 = val_idx2,
+	... (set multi column's val) (if the statement 'where' is delete , then set all the rows)
+where id = x (identify the row need to modify, any condition that identify the row is acceptable);
+
+delete from kltm ; // delete all rows
+
+describe kltm;
+
+show create table kltm; // show statements used to create table 'kltm'
+
+
+
+
