@@ -109,5 +109,7 @@ bất kỳ thg con nào kế thừa A thì đều phải định nghĩa lại h�
 	package a.b ; // create sub-package b inside package a
 
 
+ the protected access modifier is similar to default access modifier with one exception that it has visibility in sub classes
 
+- System.gc() ; // call garbage collection , if not call then jvm call it automatically later
 
