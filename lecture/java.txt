@@ -113,3 +113,13 @@ bất kỳ thg con nào kế thừa A thì đều phải định nghĩa lại h�
 
 - System.gc() ; // call garbage collection , if not call then jvm call it automatically later
 
+- final variable : khởi tạo ngay hoặc khởi tạo trong hàm constructor
+
+- final class không thể được kế thừa
+
+- finally block : luôn thực thi dù có exception hay không 
+
+- throws : nếu dùng cái này khi khai báo hàm thì những nơi dùng hàm này phải dùng cú pháp try / catch để xử lý lỗi có thể xảy ra của hàm này
+
+
+
