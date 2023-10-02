@@ -121,5 +121,17 @@ bất kỳ thg con nào kế thừa A thì đều phải định nghĩa lại h�
 
 - throws : nếu dùng cái này khi khai báo hàm thì những nơi dùng hàm này phải dùng cú pháp try / catch để xử lý lỗi có thể xảy ra của hàm này
 
+- catch(Exception e){
+  //This catch block catches all the exceptions
+}
 
+- throw new exception_class("error message");
 
+- public void myMethod() throws ArithmeticException, NullPointerException
+{
+  // Statements that might throw an exception 
+}
+
+bất cứ đâu gọi hàm này thì BẮT BUỘC phải handle hết các exception được khai báo 
+
+- 
