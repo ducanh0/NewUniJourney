@@ -134,4 +134,4 @@ bất kỳ thg con nào kế thừa A thì đều phải định nghĩa lại h�
 
 bất cứ đâu gọi hàm này thì BẮT BUỘC phải handle hết các exception được khai báo 
 
-- 
+- khi gọi constructor ở class con thì super() sẽ được tự động gọi constructor class cha , mục đích là khởi tạo các biến được kế thừa nhưng đối tượng được trỏ đến vẫn thuộc class con 
