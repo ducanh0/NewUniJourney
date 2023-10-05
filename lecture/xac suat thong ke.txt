@@ -1,0 +1,25 @@
+301 e3
+
+xác suất là độ đo khả năng xảy ra một sự kiện nào đó
+
+thống kê là sử dụng các pháp , mô hình để xử lý dữ liệu để phân tích  , tóm tắt và giải thích
+
+phép thử ngẫu nhiên : C
+
+biến cố : kết quả của phép thử C
+
+biến có đối của A : xảy ra khi A không xảy ra
+
+hợp hai biến cố : or
+
+giao hai biến cố : and
+
+A giao B = rỗng -> A, B xung khắc
+
+k(A) là số lần xuất hiện biến cố A trong n lần thử C
+Tần suất
+	fn(A) = k(A) / n
+
+-> xác suất của biến cố A : 
+	P(A) = lim( fn(A) ) khi n đến vô cùng
+

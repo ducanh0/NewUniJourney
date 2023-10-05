@@ -104,5 +104,20 @@ chuyển sang hệ 10 = (-1)^(bit dấu) * (1 + 0.xxxxx) * 2^(yyyyy)
 
 tên mảng là hằng con trỏ trỏ đến vị trí đầu tiên của mảng 
 
-mips
+mips r - format instructions
+
+op (6 bits) operation code
+rs (5 bits) first source register number thanh dau vao
+rt (5 bits) second ...
+rd () thanh dau ra 
+shamt : dich bao nhieu bit
+funct
+
+mips i - format instructions
+
+op (6 bits)
+rs (5)
+rt (5)
+constant or address (16)
+
 
