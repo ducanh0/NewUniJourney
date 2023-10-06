@@ -38,4 +38,6 @@ Tần suất
 
 - P(A) = P(AB) + P(A(~B)) (~X là biến cố đối của X)
 
+- 
+
 
