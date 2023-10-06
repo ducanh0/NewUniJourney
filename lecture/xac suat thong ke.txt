@@ -14,7 +14,7 @@ hợp hai biến cố : or
 
 giao hai biến cố : and
 
-A giao B = rỗng -> A, B xung khắc
+A giao B = rỗng -> A, B xung khắc (không thể cùng tồn tại)
 
 k(A) là số lần xuất hiện biến cố A trong n lần thử C
 Tần suất
@@ -22,4 +22,20 @@ Tần suất
 
 -> xác suất của biến cố A : 
 	P(A) = lim( fn(A) ) khi n đến vô cùng
+
+- P(AB) = P(A) * P(B|A) = P(B) * P(A|B) (nếu A,B phụ thuộc lẫn nhau)
+	= P(A) * P(B) (nếu A,B độc lập với nhau , tức là thằng này xảy ra hay không thì không liên quan đến thằng kia)
+
+- P(A + B) = P(A) + P(B) (nếu A,B xung khắc , tách rời , không liên quan đến nhau)
+	= P(A) + P(B) - P(AB) (bao hàm loại trừ)
+
+- công thức bernoulli : xác suất để biến cố A xảy ra k lần trong n lần thử là nCk * P(A)^k * (1-P(A))^(n-k)
+
+- công thức xác suất đầy đủ : xác suất biến cố A xảy ra khi không gian mẫu omega được tạo thành bởi nhiều thành phần B1, B2, ..., Bn
+-> P(A) = P(AB1) + P(AB2) + ... + P(ABn) = P(B1) * P(A | B1) + ...
+
+- công thức bayes : tính ngược lại thôi 
+
+- P(A) = P(AB) + P(A(~B)) (~X là biến cố đối của X)
+
 
