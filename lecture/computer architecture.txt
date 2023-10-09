@@ -120,4 +120,4 @@ rs (5)
 rt (5)
 constant or address (16)
 
-
+- tóm tắt slide , tổng hợp kiến thức chuẩn bị thi giữa kì
