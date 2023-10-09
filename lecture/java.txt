@@ -108,9 +108,6 @@ bất kỳ thg con nào kế thừa A thì đều phải định nghĩa lại h�
 
 	package a.b ; // create sub-package b inside package a
 
-
- the protected access modifier is similar to default access modifier with one exception that it has visibility in sub classes
-
 - System.gc() ; // call garbage collection , if not call then jvm call it automatically later
 
 - final variable : khởi tạo ngay hoặc khởi tạo trong hàm constructor
@@ -119,7 +116,7 @@ bất kỳ thg con nào kế thừa A thì đều phải định nghĩa lại h�
 
 - finally block : luôn thực thi dù có exception hay không 
 
-- throws : nếu dùng cái này khi khai báo hàm thì những nơi dùng hàm này phải dùng cú pháp try / catch để xử lý lỗi có thể xảy ra của hàm này
+- throws : nếu dùng cái này khi khai báo hàm thì những nơi dùng hàm này PHẢI dùng cú pháp try / catch để xử lý lỗi có thể xảy ra của hàm này
 
 - catch(Exception e){
   //This catch block catches all the exceptions
@@ -135,3 +132,28 @@ bất kỳ thg con nào kế thừa A thì đều phải định nghĩa lại h�
 bất cứ đâu gọi hàm này thì BẮT BUỘC phải handle hết các exception được khai báo 
 
 - khi gọi constructor ở class con thì super() sẽ được tự động gọi constructor class cha , mục đích là khởi tạo các biến được kế thừa nhưng đối tượng được trỏ đến vẫn thuộc class con 
+
+- generics same as template in c++
+
+- Vector, ArrayList same as vector in c++
+
+  LinkedList : danh sách liên kết đơn
+
+ map & set cannot contain duplicate keys
+
+  hashset = unordered_set in c++
+
+  linkedhashset = hashset + lưu thứ tự nhập đầu vào
+
+  treeset = set in c++
+
+  hashmap similar to hashset
+
+  treemap similar to treeset
+
+  linkedhashmap simiar to linkedhashset
+
+
+  
+  
+  
