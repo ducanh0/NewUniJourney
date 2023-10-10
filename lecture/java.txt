@@ -1,4 +1,4 @@
-insertion sort list leetcode -> week7
+insertion sort list leetcode -> week6 (deadline : 11h59 tonight)
 
 - jvm - java virtual machine
 
