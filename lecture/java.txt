@@ -1,3 +1,4 @@
+- java i/o , java fx, java swing
 
 - jvm - java virtual machine
 
@@ -155,5 +156,51 @@ bất cứ đâu gọi hàm này thì BẮT BUỘC phải handle hết các exce
 
 
   - khi một tham chiếu gọi một phương thức , thì phương thức đó PHẢI nằm trong class hay interface của kiểu tham chiếu đó , khi chạy runtime thì sẽ chạy phiên bản của đối tượng mà tham chiếu trỏ đến (ví dụ : Human a = new Teacher() , a.speak() -> chỉ gọi được nnay nếu speak() có trong Human , khi chạy thì sẽ gọi các phiên bản tùy thuộc xem Teacher có ghi đè phương thức speak() của Human hay không )
-  
-  
+
+// custom sort 
+  - comparable interface
+
+class A implements Comparable<A>{
+	data1;
+	data2;
+	...
+	dataN;
+
+	@Override
+	public int compareTo(A other){
+		return ( negative if this < other
+			0 if this = other
+			positive if this > other ) ;
+	}
+}
+Collections.sort(name) ; 
+
+- comparator interface : can sort base on any critiria we want , we can sort base on age , name , etc , whatever we want
+
+class customOrder1 implements comparator<A> {
+	public int compare(A a,A b){
+		return ( negative if a < b
+			0 if a = b
+			positive if a > b) ;
+	}
+}
+
+class customOrder2 implements comparator<A> {
+	public int compare(A a,A b){
+		return ( negative if a < b
+			0 if a = b
+			positive if a > b) ;
+	}
+}
+...
+
+Collections.sort(name, new customOrder1()) ;
+
+- varargs : co the truyen bao nhieu tham so tuy thich , complier tu dong tao mang [] de luu cac tham so do nguoi dung truyen vao
+
+int sum(int ... args){
+	// complier tu dong chuyen thanh int [] args
+	// luu y la chi duoc 1 ham chi duoc co DUY NHAT mot vararg va no PHAI xuat hien o CUOI danh sach tham so
+}
+
+
