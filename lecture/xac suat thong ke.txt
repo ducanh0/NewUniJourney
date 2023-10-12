@@ -1,8 +1,9 @@
+
 301 e3
 
 xác suất là độ đo khả năng xảy ra một sự kiện nào đó
 
-thống kê là sử dụng các pháp , mô hình để xử lý dữ liệu để phân tích  , tóm tắt và giải thích
+thống kê là sử dụng các phương pháp , mô hình để xử lý dữ liệu để phân tích  , tóm tắt và giải thích
 
 phép thử ngẫu nhiên : C
 
@@ -38,6 +39,13 @@ Tần suất
 
 - P(A) = P(AB) + P(A(~B)) (~X là biến cố đối của X)
 
-- 
+- dạng bài dùng cthuc xác suất đầy đủ : 
+b1 : xác định tập đầy đủ B1, B2, ..., Bn
+b2 : tính P( B1 ), P( B2 ), ..., P( Bn ), P( A | B1 ), ..., P( A | Bn )
+b3 : dùng cthuc P( A ) = sigma( P( ABi ) ) = sigma( P( Bi ) * P( A | Bi ) )
 
-
+- khi bài cho số liệu dạng tỉ lệ : 
+=> số lượng phần tử trong tập lớn
+=> làm theo kiểu có hoàn lại
+=> lấy ra 1 số lần thì xác suất biến đổi không đáng kể do số lượng phần tử lớn nên làm theo kiểu có hoàn lại
+=> xét lần lượt (lần 1 , lần 2)
