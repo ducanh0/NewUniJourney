@@ -49,3 +49,63 @@ b3 : dùng cthuc P( A ) = sigma( P( ABi ) ) = sigma( P( Bi ) * P( A | Bi ) )
 => làm theo kiểu có hoàn lại
 => lấy ra 1 số lần thì xác suất biến đổi không đáng kể do số lượng phần tử lớn nên làm theo kiểu có hoàn lại
 => xét lần lượt (lần 1 , lần 2)
+
+- biến ngẫu nhiên X : 
+	+ là biến số
+	+ nhận giá trị cụ thể sau khi thực hiện phép thử
+	+ với một mức xác suất đi kèm
+
+- phân loại biến ngẫu nhiên : 
+	+ rời rạc : tập giá trị rời rạc , đếm được 
+	+ liên tục : tập giá trị liên tục trong 1 tập các miền , không đếm được
+
+- hàm phân bố xác suất : F(x) = P(X < x)
+	=> F(x) thuộc [0, 1]
+	=> F(- infinity) = 0 , F( infinity ) = 1
+- P(a <= X < b) = P(X < b) - P(X < a) = F(b) - F(a)
+
+- X liên tục : P(X = a) = 0
+
+- Mật độ xác suất : ( F(a + delta(x)) - F(a) ) / delta(x) 
+	-> mật độ tập trung xác suất tại a = lim( ( F(a + delta(x)) - F(a) ) / delta(x) ) khi delta(x) -> 0 = F'(a) (đạo hàm)
+	-> hàm mật độ xác suất : f(x) = F'(x) >= 0 (hàm xác suất đồng biến -> đạo hàm >= 0)
+
+- các tham số đặc trưng cho biến ngẫu nhiên : 
+
+	+ kỳ vọng (trung bình) : E(X) = sigma( xi * pi ) (pi là xác suất xuất hiện xi , đang tính cho kiểu rời rạc)
+					= tích phần từ âm vô cùng -> dương vô cùng của (x * f(x) * dx)
+		=> tính chất :
+			++ E(C) = C (C là hằng số)
+			++ E(X) cùng đơn vị với X (vì nó chỉ là tính trung bình các khả năng của X)
+			++ E(k * X) = k * E(X)
+			++ E(X + Y) + E(X) + E(Y) , E(X - Y) = E(X) - E(Y)
+			++ E(X * Y) = E(X) * E(Y) (X, Y độc lập)
+
+	+ trung vị : md : nằm ở giữa phân phối xác suất , phân ra 2 bên bằng nhau
+
+	md là xi sao cho F(x(i)) <= 0.5 < F(x(i+1)) (rời rạc)
+			F(md) = P(X <= md) = 0.5 (liên tục)
+
+	+ mốt : m0 (là giá trị sao cho xác suất to nhất)
+
+		=> tính chất : 
+			++ pi <= P(X = m0) (rời rạc)
+			++ f(x) <= f(m0) (liên tục)
+
+	+ phương sai : V(X) = E(X - E(X))^2 (tính trung bình của độ lệch của X so với E(X) , lấy bình phương để tránh bị triệt tiêu khi có X < E(X) , có X > E(X))
+				= E( X^2 - 2 * X * E(X) + E^2(X) ) = E( X^2 ) - 2 * E( X * E(X) ) + E( E^2(X) )
+				= E( X^2 ) - 2 * E(X) * E(X) + E^2(X) (do E(X) là hằng số và E(C) = C)
+				= E( X^2 ) - 2 * ( E(X) )^2 + ( E(X) )^2
+				= E( X^2 ) - ( E(X) )^2
+
+		=> tính chất : 
+			++ đơn vị là (đơn vị X)^2
+			++ tính bằng cách trong các biểu thức con thì chỗ nào có x thì thay bằng x^2
+			++ V(C) = 0
+			++ V(k * X) = k^2 * V(X)
+			++ V(X + Y) = V(X) + V(Y) <=> (X, Y độc lập)
+
+	+ độ lệch chuẩn : sqrt( V(X) ) (đơn vị X)
+
+	+ hệ số biến thiên : abs( độ lệch chuẩn / kỳ vọng ) * 100% (độ phân tán tương đối)
+		=> so sánh độ phân tán của 2 biến ngẫu nhiên khác đơn vị đo
