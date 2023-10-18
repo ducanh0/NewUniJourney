@@ -1,5 +1,3 @@
-- java i/o , java fx, java swing
-
 - jvm - java virtual machine
 
 run bytecode , each operating system has different jvm , the output is the same across all 
@@ -202,5 +200,19 @@ int sum(int ... args){
 	// complier tu dong chuyen thanh int [] args
 	// luu y la chi duoc 1 ham chi duoc co DUY NHAT mot vararg va no PHAI xuat hien o CUOI danh sach tham so
 }
+
+- java fx
+
+code đồ họa
+
+application : cần import và kế thừa từ cái này 
+
+stage : 
+scene : 
+canvas : hình ảnh
+graphicsContext : 
+animationTimer : 
+timeline : 
+eventhandler : 
 
 
