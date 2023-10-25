@@ -205,11 +205,11 @@ int sum(int ... args){
 
 code đồ họa
 
-application : cần import và kế thừa từ cái này 
+application : cần import và kế thừa từ cái này  , launch trong main , override start()
 
-stage : 
+stage : cửa sổ , được tạo đầu tiên , scene vs các thứ hiển thị trên nó
 scene : 
-canvas : hình ảnh
+canvas : hình ảnh (draw text, shape, image)
 graphicsContext : 
 animationTimer : 
 timeline : 
