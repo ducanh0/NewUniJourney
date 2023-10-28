@@ -6,3 +6,52 @@ Nguồn :
 - https://github.com/dykstrom/mazela-man/tree/main
 - https://github.com/libsdl4j/libsdl4j/tree/master
 Mình sẽ viết những điều hay học được về game trong này.
+
+- new features in new version of NewTypes in java + fxgl : 
+
++ chart to monitor result in endgame , y (accurate , [0%, 100%]) , x (number of types, [0, 10, 20, ... ,10x (10x <= total types)])
+
++ more random "object" can kill the mainCharacter
+
++ not include autopilot mode -> harder to play 
+
++ accurate percent < 75 % -> lose
+  ++ 75 -> 80% : red 
+  ++ 80 -> 90% : yellow
+  ++ 90 -> 100% : green
+  ++ each 20 times type correct consecutive -> +1 accurate percent
+  ++ each 10 times type wrong -> -1 accurate percent (penalty)
+
++ a sequences of digit (example : 3447) , drop from top to bottom of the screen , you have to finish it before it reach the bottom , else -> lose
+
+- some useful note : 
+
++ initSettings : create windows ; set width, height and title
+
++ initUI : use for render text and score
+
++ initGame : use for create character in game
+
++ initPhysics : use for handling collision between characters in game
+
++ initInput : handling user input
+
++ initGameVars : use for create global variable (score = number of killed enemies , accurate type )
+
++ entity factory : use for re-create characters in game
+
++ entity component : use for add properties, methods to characters in game
+
++ userInput : use for create functionally keycode to render to menu (arrow button)
+
++ List<Entity> enemies = world.getEntitiesByType(EntityType.ENEMY); : get list of entity by type, use for check collision
+
++ Entity player = world.getSingleton(EntityType.PLAYER); : // get just one -> mainCharacter
+
++ Optional<Entity> enemy = world.getRandom(EntityType.ENEMY); : get random list -> use for change (vx, vy) of enemy or "strange object"
+
++ List<Entity> entitiesNearby = world.getEntitiesInRange(new Rectangle2D(50, 50, 100, 100)); : get list by distance w/ mainCha <= X (const val) , use for auto pilot
+
++ physic component : use for rotate image of entity
+
++
