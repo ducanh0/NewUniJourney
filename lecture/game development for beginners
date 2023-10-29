@@ -13,12 +13,11 @@ Mình sẽ viết những điều hay học được về game trong này.
 
 + more random "object" can kill the mainCharacter
 
-+ not include autopilot mode -> harder to play 
-
 + accurate percent < 75 % -> lose
   ++ 75 -> 80% : red 
   ++ 80 -> 90% : yellow
   ++ 90 -> 100% : green
+
   ++ each 20 times type correct consecutive -> +1 accurate percent
   ++ each 10 times type wrong -> -1 accurate percent (penalty)
 
