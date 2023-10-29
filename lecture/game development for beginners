@@ -54,4 +54,38 @@ Mình sẽ viết những điều hay học được về game trong này.
 
 + physic component : use for rotate image of entity
 
-+
++ background ??
+Node node = FXGL.getAssetLoader().loadTexture("player.png");
+
+// you can position the node using translate methods (as you normally would in JavaFX)
+node.setTranslateX(100);
+node.setTranslateY(100);
+
+GameView view = new GameView(node, 0); // 0 is z index
+
+getGameScene().addGameView(view);
+
++ 
+getGameTimer().runOnceAfter(() -> {
+    // code to run once after 1 second
+}, Duration.seconds(1));
+
++ 
+getGameTimer().runAtInterval(() -> {
+    // code to run every 300 ms
+}, Duration.millis(300));
+
++ 
+TimerAction timerAction = getGameTimer().runAtInterval(() -> {
+    // ...
+}, Duration.seconds(0.5));
+
+timerAction.pause();
+timerAction.resume();
+
+timerAction.expire();
+
++ random color : use for 'gai'
+
++ custom menu
+
