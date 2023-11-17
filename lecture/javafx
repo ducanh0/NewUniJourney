@@ -1,0 +1,69 @@
+1. javafx layouts 
+
+  - lớp bố cục cấp cao nhất
+  - stage -> scene -> layout -> scene-graph node
+  - phân loại : 
+      + border pane : phân màn hình làm 5 miền : top, left, bottom , right, center
+      + flow pane : sắp xếp các node theo chiều ngang , tự động xuống dòng nếu không đủ rộng
+      + grid pane : chia theo dạng bảng 2 chiều
+      + hbox : sắp xếp theo 1 hàng ngang
+      + vbox : sắp xếp theo 1 hàng dọc
+      + pane : 1 bảng không theo bố cục gì cả 
+      + stack pane : sắp xếp theo kiểu stack
+
+  - các bước : tạo layout -> set các thuộc tính layout -> thêm các node vào layout
+
+  - cụ thể : 
+    + border pane : 
+        ++ BorderPane()
+        ++ BorderPane(Node Center)
+        ++ BorderPane(Node Center, Node top, Node right, Node bottom, Node left)
+
+    + hbox : 
+        ++ new HBox()
+        ++ new Hbox(Double spacing)
+
+    + vbox : 
+        ++ VBox()
+        ++ Vbox(Double spacing)
+        ++ Vbox(Double spacing, Node? children)
+        ++ Vbox(Node? children)
+
+    + stack pane : 
+        ++ StackPane()
+        ++ StackPane(Node? Children)
+
+    + flow pane : 
+      ++ FlowPane()
+      ++ FlowPane(Double Hgap, Double Vgap)
+      ++ FlowPane(Double Hgap, Double Vgap, Node? children)
+      ++ FlowPane(Node... Children)
+      ++ FlowPane(Orientation orientation)
+      ++ FlowPane(Orientation orientation, double Hgap, Double Vgap)
+      ++ FlowPane(Orientation orientation, double Hgap, Double Vgap, Node? children )
+      ++ FlowPane(Orientation orientation, Node... Children)
+
+2. javafx ui controls
+
+  - phân loại : 
+      + label : hiển thị text
+      + button : 
+      + radio button : cung cấp nhiều option , chỉ được chọn 1, có thể dùng trong adjust word (https://www.javatpoint.com/javafx-radiobutton)
+      + check box : na ná radio buttton nhma dc chọn nhiều em một lúc :>
+      + text field : nơi cho user nhập dữ liệu vào
+      + password field : 
+      + hyper link : nhúng liên kết web
+      + slider : giống kiểu kéo điều chỉnh âm lượng
+      + progress bar
+      + progress indicator
+      + scroll bar : 
+      + menu : 
+      + tooltip : 
+
+- cụ thể : 
+      ++ label : 
+          +++ Label()
+          +++ Label(String text)  
+          +++ Label(String text, Node graphics)
+
+      ++ 
