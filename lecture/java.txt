@@ -200,3 +200,6 @@ int sum(int ... args){
 	// complier tu dong chuyen thanh int [] args
 	// luu y la chi duoc 1 ham chi duoc co DUY NHAT mot vararg va no PHAI xuat hien o CUOI danh sach tham so
 }
+
+
+- runable , thread , callable , future, concurrent , executor
