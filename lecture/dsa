@@ -1,0 +1,18 @@
+1 union find
+  
+  - quick find : a(i) = thành phần liên thông chứa i
+      mỗi lần union phải chạy cả mảng để cập nhật
+  -> chậm ở union
+
+  - quick union : a(i) = tham chiếu trỏ tới nút gốc của cây chứa i
+      khi union thì chỉ gần gán gốc cây này trỏ tới gốc cây kia
+    -> chậm ở find
+
+  - cải tiến : 
+      + quick union có trọng số ( cho cây ít phần tử hơn làm con cây lớn hơn )
+      
+      + rút ngắn đường đi : sau khi đi từ nút x lên gốc cây của nó ( trong hàm find ) , ta đi lại đường đó một lần nữa để gán thẳng mỗi nút đó tới nút gốc luôn
+
+  2 đánh giá thời gian chạy
+
+  
