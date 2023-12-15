@@ -35,4 +35,20 @@ dãy [ 1 ... i ]
 
   - thuật toán tráo ngẫu nhiên knuth : for 1 -> N , ở vị trí i thì chọn j ngẫu nhiên trong [1, i) rồi đổi chỗ với i
 
-  - 
+  - merge sort : 
+      + với các đoạn mảng nhỏ ( < 5 ) thì có thể dùng insertion sort để đỡ động đến mảng phụ ( sẽ dùng nếu là merge sort )
+      + trước khi merge kiểm tra a(mid) <= a(mid + 1) có đúng không , có thì không cần merge
+
+  - bottom up merge sort : for độ dài từ dưới lên ( 1 2 ... n ) để merge các đoạn đã sort vào
+
+  - shell sort : chia mảng thành các mảng con cách nhau một khoảng h ([1 ,1 + h ,1 + 2h, ...] [2, 2 + h, 2 + 2h , ...], [3, 3 + h, 3 + 2h, ...] ...)
+( sau đó sort các mảng con bằng insertion sort ) , sau đó giảm dần h và lặp lại như thế
+
+  - quick sort : 
+      +  với các đoạn mảng nhỏ ( < 5 ) thì có thể dùng insertion sort
+      + mỗi lần lấy khóa thì lấy ra 1 tập nhỏ và lấy giá trị giữa trong nhóm đó
+  - tìm phần tử nhỏ thứ k : 
+      + khá giống quick sort , chọn 1 khóa và phân mảng thành 2 phần , bên trái không lớn hơn nó và bên phải không nhỏ hơn nó
+      + tùy thuộc k lớn hơn hay nhỏ hơn vị trí khóa để tìm tiếp với nửa trái hay nửa phải
+
+  - phân hoạch chia 3 : khi quicksort dùng 2 con trỏ để chia mảng làm 3 đoạn ( nhỏ hơn , bằng , lớn hơn khóa )
