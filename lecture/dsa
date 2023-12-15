@@ -15,4 +15,24 @@
 
   2 đánh giá thời gian chạy
 
-  
+  3 stack & queue
+
+  - repeated doubling : khi cài đặt stack bằng mảng , khi mảng đầy thì nhân đôi độ dài mảng 
+  - đợi mảng còn 1/4 thì mới giảm kích thước mảng đi 1/2
+
+  - lập trình tổng quát
+  - iterable : trả về 1 đối tượng iterator có các phương thức hasNext() , next(), remove() để duyệt các phần tử
+
+  4 sort
+
+  - call back : đại loại là truyền hàm customSort để hàm sort gọi tùy theo các loại dữ liệu
+
+  - selection sort ( sắp xếp chọn ) : for N lần , ở lần lặp thứ i thì tìm phần tử nhỏ nhất còn lại rồi đổi chỗ với i , đại loại là mỗi lần lặp sẽ tìm thằng nhỏ nhất
+để cho lên đầu
+
+  - insertion sort ( sắp xếp chèn ) : for đến vị trí i thì sắp xếp luôn đoạn [ 1 ... i ] , hay nói cách khác là for đến i thì chèn i vào vị trí thích hợp luôn trong
+dãy [ 1 ... i ] 
+
+  - thuật toán tráo ngẫu nhiên knuth : for 1 -> N , ở vị trí i thì chọn j ngẫu nhiên trong [1, i) rồi đổi chỗ với i
+
+  - 
