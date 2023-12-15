@@ -52,3 +52,27 @@ dãy [ 1 ... i ]
       + tùy thuộc k lớn hơn hay nhỏ hơn vị trí khóa để tìm tiếp với nửa trái hay nửa phải
 
   - phân hoạch chia 3 : khi quicksort dùng 2 con trỏ để chia mảng làm 3 đoạn ( nhỏ hơn , bằng , lớn hơn khóa )
+
+
+  5 priority queue 
+
+  - cài đặt bằng binary heap : cây nhị phân mà mỗi nút có 2 nút con ( nút cha lớn hơn cả 2 nút con , heap min thì làm ngược lại )
+
+  nút i có 2 con ở vị trí 2 * i , 2 * i + 1 ( lưu trong mảng ) -> nút cha nút i là i / 2
+
+  khi thêm một nút mới vào tầng dưới cùng ( thêm vào cuối mảng ) , nếu nó vi phạm thì chỉ việc truy vết đường đi từ đó lên nút gốc và đổi chỗ với những nút cha
+  mà nhỏ hơn nó thôi , căn bản thì thứ tự trên đường đi đó sẽ không vị phạm ( vì thứ tự các nút cha đã được sắp xếp từ trước đó )
+
+  lưu ý là mảng bắt đầu từ 1
+
+  - khi xóa nút gốc thì đổi chỗ nó với phần tử cuối mảng , sau đó xóa nút gốc đó , sau đó ta tìm cách đẩy nút gốc "tạm thời" đó xuống
+  giả sử nút vi phạm thứ tự đó đang ở vị trí k , xét 2 nút con 2 * k , 2 * k + 1 , rõ ràng là ta cần đẩy 1 nút con lên , ta sẽ chọn nút con lớn hơn lên
+  để đảm bảo thứ tự , lặp lại như thế cho đến khi đảm bảo thứ tự
+
+  - heapsort : biến mảng ban đầu thành 1 cây heap , sau đó xóa dần nút gốc , kiểu quăng nó xuống cuối mảng , dần dần sẽ được 1 mảng được sắp xếp
+
+  tạo heap : bắt đầu từ n / 2 về 1 , đẩy các nút đó xuống , vì các nút > n / 2 toàn là các nút lá
+
+  - tính ổn định : là có đổi chỗ các phần tử có giá trị bằng nhau hay không
+
+
