@@ -90,4 +90,20 @@ dãy [ 1 ... i ]
     th2 : nút cần xóa có 1 con -> con con vào vị trí nó luôn ( trỏ từ cha nó tới thẳng con nó )
     th3 : nút cần xóa có 2 con , ta bốc nút nhỏ nhất trong cây con phải lên thay thế nút cần xóa
 
+  8 các cây tìm kiếm cân bằng
 
+  11 . cây 2-3
+
+    - là phiên bản mở rộng của bst , 1 nút có 2 key a < b, có 3 nút con tương ứng với 3 khoảng < a , a < ... < b , > b
+    - insert : 
+        + đi từ trên xuống theo các nhánh , khi cần insert vào 1 nút 
+            ++ nếu nút có 1 key thì biến nó thành nút 2 key
+            ++ nếu nút đó có 2 key thì thêm vào thành nút 3 key , sau đó đẩy giá trị ở giữa lên trên (đệ quy) và tách thành 2 nút 1 key 
+                (ví dụ nút đó là abc thì tách thành nút a và nút c và đẩy b lên trên (đệ quy, làm giống thế này đến khi cây hợp lệ))
+
+  12 . cây đỏ đen nghiêng trái
+
+    - với mỗi nút 3 trong cây 2-3 thì ta tạo "link ảo" , ví dụ nút 3 a b -> nút cha là b nối đến a , link ảo gọi là link đỏ , các link ban đầu gọi là link đen
+    - nếu một link đỏ nghiêng phải thì ta thực hiện phép xoay trái
+    - đôi lúc khi insert thì ta phải tạm thời xoay phải , sau đó xoay trái sau @@
+    - đổi màu : khi mà một nút có 2 link đỏ nối tới 2 nút con -> sửa 2 link đó thành đen , sửa link từ nó lên nút cha thành đỏ
