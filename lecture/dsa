@@ -75,4 +75,19 @@ dãy [ 1 ... i ]
 
   - tính ổn định : là có đổi chỗ các phần tử có giá trị bằng nhau hay không
 
+  6 bảng tra cứu ( giống map )
+    - có thể dùng danh sách liên kết + duyệt tuần tự hay mảng + chặt nhị phân ( nhma phải sắp xếp liên tục để đảm bảo thứ tự )
+
+  7 binary search tree ( bst )
+
+  - nút con trái < key nút cha < nút con phải
+
+  - để duyệt bằng iterator ( duyệt qua các phần tử của cây ) thì dùng đệ quy , 1 cái queue kết nạp tất cả các nút vào queue đó , có 3 kiểu
+  pre-order , in-order, post-order ( phân loại dựa vào thứ tự kết nạp nút cha trước/trong/sau khi thăm các nhánh con )
+
+  - hibbard deletion ( xóa trong bst ) 
+    th1 : nút cần xóa không có con -> gán là null
+    th2 : nút cần xóa có 1 con -> con con vào vị trí nó luôn ( trỏ từ cha nó tới thẳng con nó )
+    th3 : nút cần xóa có 2 con , ta bốc nút nhỏ nhất trong cây con phải lên thay thế nút cần xóa
+
 
