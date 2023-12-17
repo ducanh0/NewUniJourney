@@ -107,3 +107,7 @@ dãy [ 1 ... i ]
     - nếu một link đỏ nghiêng phải thì ta thực hiện phép xoay trái
     - đôi lúc khi insert thì ta phải tạm thời xoay phải , sau đó xoay trái sau @@
     - đổi màu : khi mà một nút có 2 link đỏ nối tới 2 nút con -> sửa 2 link đó thành đen , sửa link từ nó lên nút cha thành đỏ
+
+
+9 bảng băm
+
