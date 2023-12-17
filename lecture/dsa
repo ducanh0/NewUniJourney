@@ -111,3 +111,16 @@ dãy [ 1 ... i ]
 
 9 bảng băm
 
+  - seperate chaining ( 1 cách để giải quyết xung đột khi các key khác nhau được hash về cùng 1 giá trị ) : với mỗi ô trong bảng hash sẽ liên kết với
+      1 danh sách liên kết , nếu bị ánh xạ trùng thì cứ việc push vào danh sách liên kết đó , lúc search phải duyệt cả danh sách liên kết
+
+  - linear probing : dùng 1 mảng duy nhất , nếu bị xung đột thì tìm ô trống gần nhất
+
+  khi search thì for từ ô ánh xạ tiếp đến khi tìm thấy hoặc gặp ô trống ( kết luận k tìm thấy , vì nếu có trong bảng thì đã nhồi vào ô trống đó r )
+
+  có thể dùng mảng tự điều chỉnh kích thước để tránh có quá nhiều key trong mảng 
+
+10 đồ thị
+
+- bậc của một đỉnh là số đỉnh kề với đỉnh đó , bậc dương , âm (có hướng)
+
