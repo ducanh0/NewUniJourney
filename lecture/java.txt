@@ -173,7 +173,7 @@ class A implements Comparable<A>{
 }
 Collections.sort(name) ; 
 
-- comparator interface : can sort base on any critiria we want , we can sort base on age , name , etc , whatever we want
+- comparator interface : can sort base on any criteria we want , we can sort base on age , name , etc , whatever we want
 
 class customOrder1 implements comparator<A> {
 	public int compare(A a,A b){
@@ -203,3 +203,8 @@ int sum(int ... args){
 
 
 - runable , thread , callable , future, concurrent , executor
+
+- nếu 1 class gọi các class khác thì khi biên dịch class đó thì các class mà nó gọi đến sẽ được TỰ ĐỘNG biên dịch
+
+- khi tự cài constructor thì sẽ k còn constructor mặc định
+
