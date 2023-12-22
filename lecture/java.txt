@@ -208,3 +208,9 @@ int sum(int ... args){
 
 - khi tự cài constructor thì sẽ k còn constructor mặc định
 
+- các kiểu dữ liệu nguyên thủy không phải đối tượng , muốn biến thành đối tượng thì có các kiểu bao tương ứng 
+kiểu số thì không có khái niệm unsigned, kích thước cố định trên mọi platform
+
+- tham chiếu được lưu trữ trong vùng nhớ static / stack
+đối tượng lưu trong vùng nhớ dynamic / heap
+
