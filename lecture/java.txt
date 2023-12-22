@@ -214,3 +214,4 @@ kiểu số thì không có khái niệm unsigned, kích thước cố định t
 - tham chiếu được lưu trữ trong vùng nhớ static / stack
 đối tượng lưu trong vùng nhớ dynamic / heap
 
+
