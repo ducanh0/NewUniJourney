@@ -22,6 +22,8 @@ float a = 2.3f ; (khong co 'f' se bi hieu la double)
 
 1. tính trừu tượng 
 
+	giống kiểu tạo lớp tổng quát , không thể tạo đối tượng của lớp đó
+
 	chỉ hiển thị những gì người khác cần biết và ẩn những thứ còn lại 
 	ví dụ : nồi cơm điện thì ngta chỉ cần biết các công tắc điều khiển làm chức năng nào , còn lại nó thực hiện nnao thì ng dùng k cần biết 
 
@@ -36,6 +38,7 @@ float a = 2.3f ; (khong co 'f' se bi hieu la double)
 4. đa hình
 
 	mỗi thg con kế thừa thg cha sẽ có cách thực hiện riêng dù cùng làm 1 chức năng (ví dụ : các loại động vật kêu khác nhau)
+	overload
 
 java không hỗ trợ đa kế thừa (1 con kế thừa nhiều cha một lúc) :((
 
@@ -213,5 +216,16 @@ kiểu số thì không có khái niệm unsigned, kích thước cố định t
 
 - tham chiếu được lưu trữ trong vùng nhớ static / stack
 đối tượng lưu trong vùng nhớ dynamic / heap
+
+- phương thức static không sử dụng được this ( tại nó độc lập với đối tượng )
+
+- đối tượng hợp thành là đối tượng chứa các đối tượng khác 
+
+- mọi lớp đối tượng đều kế thừa từ lớp gốc Object
+
+- liên kết tĩnh : xác định khi biên dịch ( private , static method , chạy nhanh hơn)
+liên kết động : xác định khi chạy ( lớp con override lớp cha , java mặc định sử dụng liên kết động )
+
+
 
 
