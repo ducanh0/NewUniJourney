@@ -137,6 +137,15 @@ bất cứ đâu gọi hàm này thì BẮT BUỘC phải handle hết các exce
 
 - generics same as template in c++
 
+class class_name<T, U, ...> {
+	public <T> T func_name(){
+
+	}
+
+	<T extends BoundingType>
+	<? extends A> // áp dụng cho các lớp con của A
+}
+
 - Vector, ArrayList same as vector in c++
 
   LinkedList : danh sách liên kết đơn
@@ -225,6 +234,30 @@ kiểu số thì không có khái niệm unsigned, kích thước cố định t
 
 - liên kết tĩnh : xác định khi biên dịch ( private , static method , chạy nhanh hơn)
 liên kết động : xác định khi chạy ( lớp con override lớp cha , java mặc định sử dụng liên kết động )
+
+
+
+- i/o
+
+- chương trình nhận/gửi dữ liệu thông qua các đối tượng thuộc kiểu luồng dữ liệu
+
+- luồng là 1 dòng dữ liệu từ 1 nguồn tới 1 đích 
+
+- nguồn/đích có thể là file/màn hình/bộ nhớ/...
+
+- luồng byte (nhị phân): thao tác theo đơn vị byte (inputstream/outputstream)
+luồng char (kí tự): thao tác theo kí tự (reader/writer)
+
+- bộ đệm : đọc/ghi theo khối , làm giảm các thao tác , khối đầy thì đẩy theo khối
+
+System.out : in ra luồng ra chuẩn (là đối tượng của lớp printstream)
+System.err : in ra luồng thông báo lỗi chuẩn (là đối tượng của lớp printstream)
+System.in : đọc từ thiết bị vào chuẩn (là đối tượng của lớp inputstream)
+
+- đối tượng muốn đọc/ghi được phải cài interface serialiable
+
+
+
 
 
 
