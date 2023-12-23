@@ -86,3 +86,4 @@
   + event capturing - event filter : đi từ root node đến target node , nếu filter nào đó consume thì kết thúc quá trình xử lý sự kiện
   + event bubbling : đi từ target node lên root node , nếu có nút nào handler thì kết thúc quá trình
 
+
