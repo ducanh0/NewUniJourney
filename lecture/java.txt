@@ -256,6 +256,14 @@ System.in : đọc từ thiết bị vào chuẩn (là đối tượng của l�
 
 - đối tượng muốn đọc/ghi được phải cài interface serialiable
 
+- multi-thread
+
+thread + runnable -> chạy được
+
+executor : chạy task
+
+callable : giống runnable + trả về kết quả chạy / ngoại lệ 
+
 
 
 
