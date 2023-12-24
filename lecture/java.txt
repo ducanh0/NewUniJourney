@@ -144,6 +144,7 @@ class class_name<T, U, ...> {
 
 	<T extends BoundingType>
 	<? extends A> // áp dụng cho các lớp con của A
+	<? super A> // ap dung cho cac lop cha cua A
 }
 
 - Vector, ArrayList same as vector in c++
@@ -165,7 +166,7 @@ class class_name<T, U, ...> {
   linkedhashmap simiar to linkedhashset
 
 
-  - khi một tham chiếu gọi một phương thức , thì phương thức đó PHẢI nằm trong class hay interface của kiểu tham chiếu đó , khi chạy runtime thì sẽ chạy phiên bản của đối tượng mà tham chiếu trỏ đến (ví dụ : Human a = new Teacher() , a.speak() -> chỉ gọi được nnay nếu speak() có trong Human , khi chạy thì sẽ gọi các phiên bản tùy thuộc xem Teacher có ghi đè phương thức speak() của Human hay không )
+  - khi một tham chiếu gọi một phương thức , thì phương thức đó PHẢI nằm trong class hay interface của kiểu tham chiếu đó , khi chạy runtime thì sẽ chạy phiên bản của đối tượng mà tham chiếu trỏ đến (ví dụ : Human a = new Teacher() , a.speak() -> chỉ gọi được nnay nếu speak() có trong Human , khi chạy thì sẽ gọi các phiên bản tùy thuộc xem Teacher có ghi đè phương thức speak() của Human hay không ) --> lien ket dong
 
 // custom sort 
   - comparable interface
@@ -264,8 +265,28 @@ executor : chạy task
 
 callable : giống runnable + trả về kết quả chạy / ngoại lệ 
 
+- down/up casting :
+
+khi tham chiếu lớp cha chiếu đến đối tượng lớp con -> up casting
 
 
+- generics
+
+- design pattern
+
+	+ singleton : cả chương trình chỉ có 1 đối tượng duy nhất
+
+	+ facade : tạo lớp mới với 1 số tối thiểu các chức năng đủ dùng để đơn giản hóa để ng dùng kphai thay đổi khi cách thực hiện chức năng thay đổi
+		ví dụ : dù nồi cơm điện có mang đi sửa bao nhiêu lần thì ng dùng chỉ cần bấm nút là dc
+
+	+ template : code sẵn các method có nguyên lý không đổi để các class con dùng luôn
+
+	+ prototype : tạo đối tượng mới giống hệt đối tượng cũ , tạo interface có phương thức clone
+
+	+ adapter : tạo 1 cái trung gian giúp 2 cái không tương thích làm việc với nhau
+		ví dụ : phiên dịch viên giúp 2 ng ở 2 nước làm việc với nhau
+
+	+ 
 
 
 
