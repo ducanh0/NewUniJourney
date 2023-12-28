@@ -6,3 +6,4 @@ i will make something interesting in the future by this idea :))
 
 một app mà có thể theo dõi điểm, các môn tiên quyết , vv , viết note các môn học , lưu trữ tài liệu , viết nhật ký cảm xúc , map của trường , 
 mỗi ngày có quote truyền động lực , chữa lành , vv , pomodoro , 
+hẹn giờ bao nhiêu phút kể từ bây giờ (ví dụ: 15' nữa chẳng hạn, kiểu tự nhủ lúc chán học ấy)
